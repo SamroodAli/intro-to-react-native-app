@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { Text, TouchableOpacity, View, Alert } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 interface Props {
   name: string;
@@ -25,7 +26,7 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
   return (
     <View
       className={clsx(
-        'border-b-primary-light border-b px-2 py-4 flex-row items-center justify-between',
+        'border-b-primary-light border-b px-4 py-4 flex-row items-center justify-between',
         {
           'bg-gray-200 border-b-primary-light': isCompleted,
         },
@@ -38,16 +39,12 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
       >
         {name}
       </Text>
-      <TouchableOpacity
-        onPress={handleDelete}
-        activeOpacity={0.8}
-        className={clsx('bg-black p-2 rounded-md', {
-          'bg-gray-500': isCompleted,
-        })}
-      >
-        <Text className={clsx('text-white font-bold tracking-wide')}>
-          DELETE
-        </Text>
+      <TouchableOpacity onPress={handleDelete} activeOpacity={0.8}>
+        <AntDesign
+          name="closecircle"
+          size={24}
+          color={isCompleted ? 'gray' : 'red'}
+        />
       </TouchableOpacity>
     </View>
   );
