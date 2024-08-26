@@ -4,11 +4,11 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ title: 'Shopping List' }} />
-      <Stack.Screen name="counter" options={{ title: 'Shopping List' }} />
+      <Stack.Screen name="counter" options={{ title: 'Counter' }} />
       <Stack.Screen
         name="idea"
         options={{
-          title: 'Shopping List',
+          title: 'Idea',
           presentation: 'modal',
           animation: 'slide_from_bottom',
         }}
