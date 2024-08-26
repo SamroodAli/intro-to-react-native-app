@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View className="flex-1 justify-center">
       <Link className="text-center mb-4" href="/counter">
-        Go to counter
+        Go to index
       </Link>
       <ShoppingListItem name="Coffee" isCompleted />
       <ShoppingListItem name="Tea" />

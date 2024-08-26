@@ -8,16 +8,12 @@ interface Props {
 }
 
 export function ShoppingListItem({ name, isCompleted }: Props) {
-  function onCofirmDelete() {
-    console.log('another thing');
-  }
-
   function handleDelete() {
     Alert.alert(
       `Are you sure you want to delete ${name.toLowerCase()}?`,
       'It will be gone for good',
       [
-        { text: 'Yes', onPress: onCofirmDelete, style: 'destructive' },
+        { text: 'Yes', style: 'destructive' },
         { text: 'Cancel', style: 'cancel' },
       ],
     );
